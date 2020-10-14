@@ -1,10 +1,21 @@
 package pe.com.comsatel.basictodo;
 
 public class Task {
+
+    private Integer id;
     private String description;
 
-    public Task(String description) {
+    public Task(Integer id, String description) {
+        this.id = id;
         this.description = description;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getDescription() {
@@ -14,4 +25,5 @@ public class Task {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
