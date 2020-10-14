@@ -4,10 +4,12 @@ public class Task {
 
     private Integer id;
     private String description;
+    private Boolean state;
 
-    public Task(Integer id, String description) {
+    public Task(Integer id, String description, Boolean state) {
         this.id = id;
         this.description = description;
+        this.state = state;
     }
 
     public Integer getId() {
@@ -26,4 +28,11 @@ public class Task {
         this.description = description;
     }
 
+    public Boolean getState() {
+        return state;
+    }
+
+    public void setState(Boolean state) {
+        this.state = state;
+    }
 }

@@ -10,9 +10,9 @@ import java.util.List;
 public class TaskServiceImp implements TaskService {
 
     List<Task> testTasks = new ArrayList<>(Arrays.asList(
-            new Task(1, "Esta es una tarea1"),
-            new Task(2, "Esta es una tarea2"),
-            new Task(3, "Esta es una tarea3")
+            new Task(1, "Esta es una tarea1", false),
+            new Task(2, "Esta es una tarea2", false),
+            new Task(3, "Esta es una tarea3", false)
     ));
 
     @Override
@@ -27,14 +27,16 @@ public class TaskServiceImp implements TaskService {
     }
 
     @Override
-    public void createTask(Task task) {
+    public Task createTask(Task task) {
         testTasks.add(task);
+        return task;
     }
 
     @Override
-    public void updateTask(Integer id, Task task) {
+    public Task updateTask(Integer id, Task task) {
         assert id > 1 && task != null;
         testTasks.get(getIndex(id)).setDescription(task.getDescription());
+        return task;
     }
 
     @Override
