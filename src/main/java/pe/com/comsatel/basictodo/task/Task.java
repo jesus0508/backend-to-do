@@ -1,10 +1,21 @@
-package pe.com.comsatel.basictodo;
+package pe.com.comsatel.basictodo.task;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name = "task")
 public class Task {
-
+    @Id
+    @Column(name = "id")
     private Integer id;
+    @Column(name = "description")
     private String description;
+    @Column(name = "state")
     private Boolean state;
+
+    public Task() {
+    }
 
     public Task(Integer id, String description, Boolean state) {
         this.id = id;

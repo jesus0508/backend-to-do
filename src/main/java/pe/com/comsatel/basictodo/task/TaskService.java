@@ -1,4 +1,4 @@
-package pe.com.comsatel.basictodo;
+package pe.com.comsatel.basictodo.task;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ interface TaskService {
 
     Task createTask(Task task);
 
-    Task updateTask(Integer id, Task task);
+    Task updateTask(Integer id, Task newTask);
 
     void deleteTask(Integer id);
 }

@@ -1,4 +1,4 @@
-package pe.com.comsatel.basictodo;
+package pe.com.comsatel.basictodo.task;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
