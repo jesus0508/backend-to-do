@@ -3,6 +3,7 @@ package pe.com.comsatel.basictodo.task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -13,7 +14,8 @@ public class TaskServiceImp implements TaskService {
 
     @Override
     public List<Task> getAllTasks() {
-        return taskRepository.findAll();
+        return new ArrayList<>(taskRepository.findAll());
+
     }
 
     @Override
